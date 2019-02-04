@@ -35,6 +35,11 @@ class RunTasks extends Config
         $this->createRelations();
     }
 
+    protected function createRelations()
+    {
+        
+    }
+
     protected function processEpic(CustomerDto $customer)
     {
         if (isset($this->epic)) {
