@@ -78,6 +78,9 @@ class TaskDto
         $this->dueDate      = $task['duedate'];
         $this->reporter     = $users[$task['reporter']];
         $this->label        = $customer->label;
-        $this->epicLinkBool = $task['epicLink'];
+
+        if (! empty($task['epicLink'])) {
+            $this->epicLinkBool = $task['epicLink'];
+        }
     }
 }
