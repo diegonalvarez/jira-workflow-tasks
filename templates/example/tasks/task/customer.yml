@@ -8,6 +8,7 @@ customer:
   duedate: "2019-02-05"
   reporter: admin
   epicLink: true
+  reference: customer
   subtasks:
     one:
       reference: one
