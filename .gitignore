@@ -1,0 +1,7 @@
+templates/*
+!templates/example/*
+responses
+_*
+.DS_Store
+vendor/
+.env
