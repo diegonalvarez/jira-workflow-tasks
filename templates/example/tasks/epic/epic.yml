@@ -8,3 +8,4 @@ epic:
   duedate: "2019-02-04"
   reporter: admin
   epicLink: false
+  reference: epic
