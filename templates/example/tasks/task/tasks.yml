@@ -1,0 +1,5 @@
+customer:
+  path: templates/example/tasks/task/customer.yml
+
+development:
+  path: templates/example/tasks/task/development.yml

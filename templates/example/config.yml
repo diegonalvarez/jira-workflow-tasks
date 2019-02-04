@@ -1,0 +1,16 @@
+projects:
+  name: templates
+  key: TEM
+  epicTitle: customfield_10011
+  epicLink: customfield_10014
+
+tasks:
+  users:
+    path: templates/example/users/users.yml
+  epic:
+    path: templates/example/tasks/epic/epic.yml
+  tasks:
+    path: templates/example/tasks/task/tasks.yml
+
+relations:
+  path: templates/example/tasks/relations.yml

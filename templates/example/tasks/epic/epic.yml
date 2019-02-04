@@ -1,0 +1,10 @@
+epic:
+  type: Epic
+  project: templates
+  title: John Doe for Epic Issue
+  responsable: diego
+  priority: High
+  description: Task for John Dow
+  duedate: "2019-02-04"
+  reporter: admin
+  epicLink: false

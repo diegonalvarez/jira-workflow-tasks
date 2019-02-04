@@ -1,0 +1,7 @@
+relations:
+  one:
+    type: Blocks
+    from: customer
+    to: customer
+    to_end: one
+    extra: ['customer']['one']

@@ -1,0 +1,21 @@
+development:
+  type: Task
+  project: templates
+  title: "Development: Project Development and implementation"
+  responsable: admin
+  priority: High
+  description: " "
+  duedate: "2019-02-05"
+  reporter: admin
+  epicLink: true
+  subtasks:
+    one:
+      reference: one
+      type: Sub-task
+      project: templates
+      title: "Apply Agile method"
+      responsable: admin
+      priority: High
+      description: " "
+      duedate: "2019-02-05"
+      reporter: admin
