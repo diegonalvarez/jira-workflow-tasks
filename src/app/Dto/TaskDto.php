@@ -70,7 +70,7 @@ class TaskDto
     {
         $this->reference    = $task['reference'];
         $this->projectId    = $project['key'];
-        $this->title        = date('H:i:s') .' '. $task['title'] ." para ". $customer->target ." de ". $customer->name ;
+        $this->title        = $task['title'] ." para ". $customer->target ." de ". $customer->name ;
         $this->responsable  = $users[$task['responsable']];
         $this->priority     = $task['priority'];
         $this->type         = $task['type'];
