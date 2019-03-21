@@ -80,7 +80,6 @@ class RunTasks extends Config
             }
         }
         $this->resetParentLink();
-
     }
 
     public function newIssue(CustomerDto $customer, $task, $origin = null)

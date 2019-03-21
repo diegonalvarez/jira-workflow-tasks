@@ -18,6 +18,6 @@ class IssueJiraLink
 
         $ils = new IssueLinkService();
 
-        // $ret = $ils->addIssueLink($il);
+        $ret = $ils->addIssueLink($il);
     }
 }
