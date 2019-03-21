@@ -1,7 +1,7 @@
-relations:
+customer:
   one:
-    type: Blocks
-    from: customer
-    to: customer
-    to_end: one
-    extra: ['customer']['one']
+    type: Problem/Incident #Relates #Cloners #Blocks #causes # Blocks
+    task: sub-task
+    origin: two
+    to_project: development
+    to_issue: one
