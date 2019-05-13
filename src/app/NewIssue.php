@@ -59,7 +59,7 @@ class NewIssue
     {
         if ($taskDto->type === 'Epic') {
             $this->issueField->addCustomField($this->project['epicTitle'], $taskDto->title);
-        } elseif ($taskDto->type !== 'Sub-task') {
+        } elseif ($taskDto->type !== 'Subtarea') {
             $this->setEpicLink($taskDto);
         }
     }
@@ -75,7 +75,7 @@ class NewIssue
 
     protected function setSubTaskParent(TaskDto $taskDto)
     {
-        if ($taskDto->type === 'Sub-task') {
+        if ($taskDto->type === 'Subtarea') {
             $this->issueField->setParentKeyOrId($this->env->parentLink);
         }
     }
@@ -86,7 +86,7 @@ class NewIssue
             return;
         }
 
-        if ($taskDto->type === 'Sub-task') {
+        if ($taskDto->type === 'Subtarea') {
             $this->env->issues[$origin]['sub-task'][$taskDto->reference] = $issue->key;
         } else {
             $this->env->issues[$origin]['main']['key'] = $issue->key;
