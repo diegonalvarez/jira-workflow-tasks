@@ -5,6 +5,7 @@ namespace App;
 use App\Config;
 use App\Dto\CustomerDto;
 use App\Dto\TaskDto;
+use App\IssueJiraLink;
 use App\NewIssue;
 use JiraRestApi\Issue\IssueField;
 use JiraRestApi\Issue\IssueService;
@@ -37,7 +38,25 @@ class RunTasks extends Config
 
     protected function createRelations()
     {
-        
+        $issueLink = new IssueJiraLink;
+        foreach ($this->relations as $key => $value) {
+            foreach ($value as $keyValue => $relation) {
+                $origin  = $this->setOrigin($key, $relation);
+                $destiny = $this->setDestiny($relation['to_project'], $relation);
+
+                $issueLink->linkIssue($origin, $destiny, $relation['type']);
+            }
+        }
+    }
+
+    protected function setOrigin($project, $task)
+    {
+        return $this->env->issues[$project][$task['task']][$task['origin']];
+    }
+
+    public function setDestiny($project, $task)
+    {
+        return $this->env->issues[$project][$task['task']][$task['to_issue']];
     }
 
     protected function processEpic(CustomerDto $customer)

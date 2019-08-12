@@ -23,5 +23,9 @@ class Config extends AbstractJiraIssuesConfig
             $class     = new $className();
             $this->{$key} = $class->setConfigYaml($value['path'], $key);
         }
+
+        foreach ($this->config->relations as $key => $value) {
+            $this->setYaml($value, 'relations');
+        }
     }
 }
