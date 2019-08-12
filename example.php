@@ -6,11 +6,11 @@ use App\Dto\CustomerDto;
 use App\RunTasks;
 
 try{
-    $template = 'facebook_campania_landing';
+    $template = 'example';
 
-    $name     = 'FAM Corp Jesus Soler';
-    $label    = 'fam_corp_rent_a_car';
-    $target   = 'Rent a Car';
+    $name     = 'Diego Alvarez';
+    $label    = 'diego_alvarez';
+    $target   = 'Argentina';
 
     $customerDto = new CustomerDto(
         $name,
